@@ -10,7 +10,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 
-# In[75]:
+
 
 data = pd.read_csv("혜우_커피공간.csv")
 data.head()
@@ -18,7 +18,6 @@ data=data.rename(columns={data.columns[0]:"브랜드"})
 data
 
 
-# In[76]:
 
 data1= data.drop('공간',axis=1)
 data2= data.drop('커피',axis=1)
@@ -31,12 +30,12 @@ df_pivot2
 df_pivot
 
 
-# In[ ]:
 
 
 
 
-# In[94]:
+
+
 
 import platform
 from matplotlib import font_manager, rc
@@ -52,7 +51,7 @@ else:
     print ("Unknown System OS")
 
 
-# In[78]:
+
 
 # df_pivot1=df_pivot1.sort_values(by=['커피'],ascending=False)
 heat_m=sns.heatmap(data=df_pivot1,fmt='f',annot=True)
@@ -61,12 +60,7 @@ heat_m
 plt.show()
 
 
-# In[ ]:
 
-
-
-
-# In[79]:
 
 # df_pivot2=df_pivot2.sort_values(by=['공간'],ascending=False)
 heat_m=sns.heatmap(data=df_pivot2,fmt='f',annot=True)
@@ -74,8 +68,7 @@ heat_m=sns.heatmap(data=df_pivot2,fmt='f',annot=True)
 heat_m
 plt.show()
 
-
-# In[109]:
+#표준화한 데이터 직접 삽입
 
 data3={"커피브랜드":["던킨",
 "탐앤탐스",
